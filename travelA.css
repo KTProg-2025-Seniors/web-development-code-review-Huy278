@@ -1,0 +1,89 @@
+body{
+    font-family: 'Courier New', monospace;
+    background-color: #E0E0E2;
+}
+#topBar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:10vh;
+    width:100vw;
+    background-color:#FF761A;
+    z-index: 98;
+}
+.topBarObj{
+    height:10vh;
+    width:auto;
+    float:left;
+    padding-right: 1vw;
+}
+#topBarBtn:hover{
+    background-color: #FF761A;
+}
+#topBarBtn{
+    background-color:#E0E0E2;
+    border-left-style:solid;
+    border-color:#0A0D00;
+    color:#721817;
+    font-size:5vh;
+}
+#topBarBtn p{
+    margin-top:2vh;
+    margin-left:1vw;
+}
+#topBarTitle{
+    color:#0A0D00;
+    font-size:10vh;
+}
+#mainContent{
+    display:grid;
+    margin-top:10vh;
+    grid-template-columns: auto auto;
+    padding: 1%;
+    position:absolute;
+    margin-left:30vw;
+    height: auto;
+    width:40vw;
+    background-color: #839791;
+    border-style:solid;
+    border-color: #FF761A;
+}
+#rightContent{
+    position:fixed;
+    margin-top:10vh;
+    right:0;
+    margin-right:2vw;
+    height:84vh;
+    width:22vw;
+    background-color: #839791;
+    visibility: hidden;
+    border-right-style: dashed;
+    border-color:#0A0D00;
+    font-size:2vw;
+    padding: 1%;
+    overflow:scroll;
+}
+#rightContent p{
+    font-size:1vw;
+}
+.travelOption{
+    position: relative;
+    width:18vw;
+    height:18vw;
+    background-color: #E0E0E2;
+    border-style:solid;
+    border-color: #FF761A;
+    border-radius: 10px;
+    margin:auto;
+    margin-top:2vw;
+    text-align:center;
+    font-size:2vw;
+}
+.travelOption > img{
+    position: absolute;
+    bottom:1vw;
+    left:1vw;
+}
+.travelOption:hover{
+    border-color:#721817;
+}
