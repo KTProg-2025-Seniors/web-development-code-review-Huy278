@@ -78,14 +78,44 @@ function createWeatherDescription(weatherData) {
     description = "Current Tempurature: " + main.temp.toString() + temperatureSymobol;// + " - " + convertedDateAndTime.substring(10) + " - " + convertedDateAndTime.substring(5, 10);
     return description;
 }
-let locations=[["Grand Canyon","The Grand Canyon is in Arizona. It is one of the greatest canyons in the world. It was created by erosion over many millions of years. There are many hiking trails and scenic views.<br><img src=\"images\\grandcanyonbtm2.jpg\" alt=\"grand canyon picture\" width=90%><br>For the trip you will fly to the airport and be picked up in a van to be driven to the bottom of the canyon where you will experience living at the bottom of the Grand Canyon. You will be able to hike and see the views peacefully without any intrusions from civilization. Arizona uses MST.<br><img src=\"images\\grandcanyonbtm1.png\" alt=\"grand canyon picture\" width=90%>", "Grand Canyon Village"]
-,["Hạ Long Bay","Hạ Long Bay is a body of water off the coast of Hạ Long in Vietnam. It has many beautiful islands and is pretty. There are many things to do such as swimming kayaking and exploring some of the caves.<br><img src=\"images\\halongbayp1.jpg\" alt=\"ha long bay islands picture\" width=90%><br>On your trip you will be placed on one of the farthest out islands by a boat. You will be able to enjoy the natural beauty and peacefulness of the island. You can swim in the water and relax while you enjoy your vacation.", "Ha Long"]
+let locations=[["Grand Canyon","The Grand Canyon is in Arizona. It is one of the greatest canyons in the world. It was created by erosion over many millions of years. There are many hiking trails and scenic views.<br><img src=\"images\\grandcanyonbtm2.jpg\" alt=\"grand canyon picture\" width=90%><br>For the trip you will fly to the airport and be picked up in a van to be driven to the bottom of the canyon where you will experience living at the bottom of the Grand Canyon. You will be able to hike and see the views peacefully without any intrusions from civilization. Arizona uses MST. Temperature in console.<br><img src=\"images\\grandcanyonbtm1.png\" alt=\"grand canyon picture\" width=90%>", "Grand Canyon Village"]
+,["Hạ Long Bay","Hạ Long Bay is a body of water off the coast of Hạ Long in Vietnam. It has many beautiful islands and is pretty. There are many things to do such as swimming kayaking and exploring some of the caves.<br><img src=\"images\\halongbayp1.jpg\" alt=\"ha long bay islands picture\" width=90%><br>On your trip you will be placed on one of the farthest out islands by a boat. You will be able to enjoy the natural beauty and peacefulness of the island. You can swim in the water and relax while you enjoy your vacation. Vietnam is in the Indochina Time zone, which is UTC+7. Temperature in console.", "Ha Long"]
 ,["not done","not done","not done"]];
 function changeInfo(place){
 
     document.getElementById("rightContent").style.visibility="visible";
     document.getElementById("rightContent").innerHTML=locations[place][0]+" <br><p>"+locations[place][1]+"</p>"+ fetchWeather(locations[place][2]);
     //no worky
+}
+function submitEmailForm(){
+    let email = document.getElementById('emailTxt').value;
+    if(ValidateEmail(email))
+    {
+        alert(email+" added to mailing list");
+    }
+    else
+    {
+        alert(email+" was not a valid email")
+    }
+}
+function ValidateEmail(input) {
+
+  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (input.match(validRegex)) {
+
+    //alert("Valid email address!");
+
+    return true;
+
+  } else {
+
+    //alert("Invalid email address!");
+
+    return false;
+
+  }
+
 }
 
 

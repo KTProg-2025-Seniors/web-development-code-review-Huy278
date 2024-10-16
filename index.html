@@ -7,31 +7,33 @@
         <script type="text/javascript" src="travelA.js"></script>
     </head>
     <body>
-        <div id="topBar">
-            <div class="topBarObj" id="topBarTitle">TRAVEL A</div>
-            <div class="topBarObj" id="topBarBtn"><p>About</p></div>
-            <div class="topBarObj" id="topBarBtn"><p>Services</p></div>
-            <div class="topBarObj" id="topBarBtn"><p>yeah</p></div>
-            <div class="topBarObj" id="topBarBtn"><p>yeah</p></div>
+        <div id="page-container">
+            <div id="topBar">
+                <div class="topBarObj" id="topBarTitle">TRAVEL A</div>
+                <div class="topBarObj" id="topBarBtn"><p>About</p></div>
+                <div class="topBarObj" id="topBarBtn"><p>Help</p></div>
+                <div class="topBarObj" id="topBarBtn"><form id="emailForm"><label for="email">Mailing list&nbsp</label><input type="email" id="emailTxt" name="emailTxt" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Email"><input type="submit" id="emailBtn" value="Join" onclick="submitEmailForm()"></form></div>
+            </div>
+            <div id="mainContent">
+                <div class="travelOption" onclick='changeInfo(0)'>
+                    Grand Canyon National Park
+                    <img src="images\grandcanyon.jpg" alt="grand canyon picture" width=90%>
+                </div>
+                <div class="travelOption" onclick='changeInfo(1)'>
+                    Hạ Long Bay
+                    <img src="images\halongbay.jpg" alt="ha long bay islands picture" width=90%>
+                </div>
+                <div class="travelOption">
+                    Humboldt-Toiyabe National Forest
+                </div>
+                <div class="travelOption">4</div>
+                <div class="travelOption">1</div>
+                <div class="travelOption">2</div>
+                <div class="travelOption">3</div>
+                <div class="travelOption">4</div>
+            </div>
+            <div id="rightContent"></div>
+            <footer id="foote">90 Fruitless Drive, Framingham Massachusetts.  617-324-1355.<br>Directions: Go left and then go right a little bit.</footer>
         </div>
-        <div id="mainContent">
-            <div class="travelOption" onclick='changeInfo(0)'>
-                Grand Canyon National Park
-                <img src="images\grandcanyon.jpg" alt="grand canyon picture" width=90%>
-            </div>
-            <div class="travelOption" onclick='changeInfo(1)'>
-                Hạ Long Bay
-                <img src="images\halongbay.jpg" alt="ha long bay islands picture" width=90%>
-            </div>
-            <div class="travelOption">
-                Humboldt-Toiyabe National Forest
-            </div>
-            <div class="travelOption">4</div>
-            <div class="travelOption">1</div>
-            <div class="travelOption">2</div>
-            <div class="travelOption">3</div>
-            <div class="travelOption">4</div>
-        </div>
-        <div id="rightContent"></div>
     </body>
 </html>
